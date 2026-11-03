@@ -1,0 +1,15 @@
+{
+  "name": "nonprofit-learning-citations",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.18.0"},
+  "scripts": {
+    "start": "node --env-file=.env src/research_notes.ts",
+    "example": "curl --fail-with-body -X POST http://localhost:3000/notes -H 'Content-Type: application/json' --data-binary @lesson-note.json",
+    "test": "node --test test/citation_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {"zod": "^3.24.2"},
+  "devDependencies": {"@types/node": "^22.13.10", "typescript": "^5.8.2"}
+}
